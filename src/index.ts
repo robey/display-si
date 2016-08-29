@@ -87,31 +87,3 @@ export function toSI(n: number, base: number = 1000.0): string {
 export function toBinarySI(n: number): string {
   return toSI(n, 1024.0);
 }
-
-// function magnitude(n: number, base: number = 1000.0): string {
-//   let label = HUMAN_LABELS[index];
-//   if (label == " ") label = "";
-//   number = number.toString().slice(0, 4);
-//   // compensate for sloppy floating-point rounding:
-//   while (number.indexOf(".") > 0 && number[number.length - 1] == "0") {
-//     number = number.slice(0, number.length - 1);
-//   }
-//   return number + label;
-// }
-//
-// humanize = (number) ->
-//   number = roundToPrecision(number, 4)
-//   label = HUMAN_LABELS[index]
-//   if label == " " then label = ""
-//   lpad(number.toString()[...5], 5) + label
-//
-//
-// lpad = (s, n) ->
-//   if s.length >= n then return s
-//   lpad("          "[0 ... n - s.length] + s, n)
-//
-//
-// exports.humanize = humanize
-// exports.roundToPrecision = roundToPrecision
-// exports.roundToCurrency = roundToCurrency
-// exports.maxByKey = maxByKey
