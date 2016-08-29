@@ -4,7 +4,7 @@ Handy functions for rounding numbers to human-friendly representations for displ
 
 ## Example
 
-The best examples are in the test file.
+The best examples are in the unit tests under `test/`.
 
 ```javascript
 roundToPrecision(123, 1)  // 100
@@ -23,16 +23,18 @@ Precision methods will floor, ceiling, or round to the nearest decimal (base 10)
 
 SI conversions turn unwieldy large or small numbers into SI-prefixed short numbers (0.1 becomes "100m") between `10**-18` and `10**18` (or `2**-60` and `2**60` in binary).
 
-- `ceilToCurrency(n: number): number`
+(FIXME: per-function doc)
 
-ceilToCurrency,
-ceilToPrecision,
-floorToCurrency,
-floorToPrecision,
-roundToCurrency,
-roundToPrecision,
-toBinarySI,
-toSI
+- `roundToPrecision(n: number, digits: number): number`
+- `ceilToPrecision(n: number, digits: number): number`
+- `floorToPrecision(n: number, digits: number): number`
+
+- `roundToCurrency(n: number): number`
+- `ceilToCurrency(n: number): number`
+- `floorToCurrency(n: number): number`
+
+- `toSI(n: number, base: number = 1000.0): string`
+- `toBinarySI(n: number): string`
 
 ## License
 

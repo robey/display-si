@@ -19,10 +19,10 @@
     "built/src",
     "declarations/src"
   ],
-  "typings": "declarations/src",
+  "typings": "built/src",
   "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf built declarations",
+    "build": "tsc -d --declarationDir built/",
+    "clean": "rm -rf built",
     "distclean": "npm run clean && rm -rf node_modules npm-debug.log",
     "prepublish": "npm run build",
     "test": "npm run build && mocha -R spec --colors built/test"
