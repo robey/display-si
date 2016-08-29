@@ -1,0 +1,38 @@
+{
+  "name": "display-si",
+  "version": "1.0.0",
+  "description": "convert/round numbers to human-friendly SI units like \"13.4M\"",
+  "keywords": [
+    "display",
+    "numbers",
+    "si"
+  ],
+  "author": "Robey Pointer <robeypointer@gmail.com>",
+  "homepage": "https://github.com/robey/display-si",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/robey/display-is.git"
+  },
+  "license": "Apache-2.0",
+  "main": "built/index.js",
+  "files": [
+    "built/src",
+    "declarations/src"
+  ],
+  "typings": "declarations/src",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf built declarations",
+    "distclean": "npm run clean && rm -rf node_modules npm-debug.log",
+    "prepublish": "npm run build",
+    "test": "npm run build && mocha -R spec --colors built/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.31",
+    "@types/should": "^8.1.29",
+    "mocha": "^3.0.2",
+    "should": "^11.1.0",
+    "typescript": "^2.0.0",
+    "typings": "^1.3.3"
+  }
+}
