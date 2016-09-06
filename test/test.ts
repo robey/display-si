@@ -98,19 +98,28 @@ describe("display-si", () => {
     toSI(1).should.eql("1");
     toSI(109).should.eql("109");
     toSI(999).should.eql("999");
+
     toSI(1000).should.eql("1K");
     toSI(1001).should.eql("1K");
     toSI(1024).should.eql("1K");
+    toSI(1075).should.eql("1.1K");
+    toSI(1076).should.eql("1.1K");
     toSI(1240).should.eql("1.2K");
     toSI(1540).should.eql("1.5K");
     toSI(9949).should.eql("9.9K");
     toSI(9999).should.eql("10K");
+
     toSI(12345).should.eql("12K");
     toSI(123456).should.eql("123K");
+    toSI(1024000).should.eql("1M");
     toSI(1234567).should.eql("1.2M");
     toSI(74449000).should.eql("74M");
+
     toSI(Math.pow(2, 32)).should.eql("4.3G");
     toSI(Math.pow(2, 64)).should.eql("18E");
+    toSI(Math.pow(10, 10)).should.eql("10G");
+    toSI(Math.pow(10, 20)).should.eql("100E");
+
     toSI(0.1).should.eql("100m");
     toSI(0.01).should.eql("10m");
     toSI(0.001).should.eql("1m");
@@ -125,19 +134,28 @@ describe("display-si", () => {
     toBinarySI(1).should.eql("1");
     toBinarySI(109).should.eql("109");
     toBinarySI(999).should.eql("999");
+
     toBinarySI(1000).should.eql("1000");
     toBinarySI(1001).should.eql("1001");
     toBinarySI(1024).should.eql("1K");
+    toBinarySI(1075).should.eql("1K");
+    toBinarySI(1076).should.eql("1.1K");
     toBinarySI(1240).should.eql("1.2K");
     toBinarySI(1540).should.eql("1.5K");
     toBinarySI(9949).should.eql("9.7K");
     toBinarySI(9999).should.eql("9.8K");
+
     toBinarySI(12345).should.eql("12K");
     toBinarySI(123456).should.eql("121K");
+    toBinarySI(1024000).should.eql("1000K");
     toBinarySI(1234567).should.eql("1.2M");
     toBinarySI(74449000).should.eql("71M");
+
     toBinarySI(Math.pow(2, 32)).should.eql("4G");
     toBinarySI(Math.pow(2, 64)).should.eql("16E");
+    toBinarySI(Math.pow(10, 10)).should.eql("9.3G");
+    toBinarySI(Math.pow(10, 20)).should.eql("87E");
+
     toBinarySI(0.1).should.eql("102m");
     toBinarySI(0.01).should.eql("10m");
     toBinarySI(0.001).should.eql("1m");
