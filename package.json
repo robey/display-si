@@ -1,6 +1,6 @@
 {
   "name": "display-si",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "convert/round numbers to human-friendly SI units like \"13.4M\"",
   "keywords": [
     "display",
