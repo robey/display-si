@@ -7,25 +7,23 @@
     "jsx": "react",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    /*"declaration": true,
-    "declarationDir": "declarations/",*/
     "noImplicitAny": true,
     "noImplicitUseStrict": false,
     "noImplicitReturns": true,
     "allowUnreachableCode": false,
     "removeComments": true,
     "noLib": false,
-    "rootDir": ".",
-    "outDir": "built/",
+    "rootDir": "src/",
+    "outDir": "lib/",
+    "declaration": true,
+    "declarationDir": "lib/",
     "preserveConstEnums": true,
     "sourceMap": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": true
   },
-  "exclude": [
-    "node_modules",
-    "typings/browser",
-    "typings/browser.d.ts",
-    "declarations/"
+  "filesGlob": [
+    "src/**/*.ts"
   ],
   "compileOnSave": true,
   "buildOnSave": false,

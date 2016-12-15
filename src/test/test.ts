@@ -7,7 +7,7 @@ import {
   roundToPrecision,
   toBinarySI,
   toSI
-} from "../src";
+} from "..";
 
 import "should";
 
