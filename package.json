@@ -14,8 +14,8 @@
     "url": "git://github.com/robey/display-is.git"
   },
   "license": "Apache-2.0",
-  "main": "lib/",
-  "types": "lib/",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
